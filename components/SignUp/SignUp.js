@@ -16,19 +16,23 @@ export default function SignUp() {
             }}
             onSubmit={handleSubmit}
         >
+
             {({ handleChange, handleBlur, handleSubmit, values }) => (
                 <View>
                     <TextInput
+                        type="text"
                         onChangeText={handleChange('username')}
                         onBlur={handleBlur('username')}
                         value={values.username}
                         placeholder="Username"
+                        style="margin-bottom:15px"
                     />
                     <TextInput
                         onChangeText={handleChange('email')}
                         onBlur={handleBlur('email')}
                         value={values.email}
                         placeholder="Email"
+
                     />
                     <TextInput
                         onChangeText={handleChange('password')}
