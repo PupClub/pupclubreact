@@ -1,12 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NativeRouter, Route, Routes } from 'react-router-native';
+import Home from './components/Home/Home';
+import SignUp from './components/SignUp/SignUp';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeRouter>
+        <View style={styles.container}>
+            <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/signUp" element={<SignUp />} />
+            </Routes>
+        </View>
+    </NativeRouter>
   );
 }
 
