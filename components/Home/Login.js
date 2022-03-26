@@ -1,37 +1,43 @@
-import { View, Text} from 'react-native';
+import { View, Text, StyleSheet, Image} from 'react-native';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TextInput from '../TextInput';
 import Button from '../Button';
-
+import dogIcon from '../../assets/dog.png';
+import { Link } from 'react-router-native';
 
 export default function Login() {
+    const navigate = useNavigate();
+
     return (
         <View
               style={{
                 flex: 1,
-                backgroundColor: '#fff',
+                backgroundColor: "black",
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                //width: "full",
+                minWidth: 413,
               }}
         >
-              <Text style={{ color: '#223e4b', fontSize: 20, marginBottom: 16 }}>
-                Login
-              </Text>
-              <View style={{ paddingHorizontal: 32, marginBottom: 16, width: '100%' }}>
+              <View>
+                <Image source= {dogIcon} style={{width: 200, height: 400, margin: -40}}/>
+               </View>
+              <View style={{ paddingHorizontal: 20, marginBottom: 6, width: '69%' }}>
                 <TextInput
-                  icon='mail'
+                  //icon='mail'
                   placeholder='Enter your email'
                   autoCapitalize='none'
                   autoCompleteType='email'
                   keyboardType='email-address'
-                  keyboardAppearance='dark'
+                  keyboardAppearance='light'
                   returnKeyType='next'
                   returnKeyLabel='next'
                 />
               </View>
-              <View style={{ paddingHorizontal: 32, marginBottom: 16, width: '100%' }}>
+              <View style={{ paddingHorizontal: 20, marginBottom: 6, width: '69%' }}>
                 <TextInput
-                  icon='key'
+                  //icon='key'
                   placeholder='Enter your password'
                   secureTextEntry
                   autoCompleteType='password'
@@ -41,7 +47,18 @@ export default function Login() {
                   returnKeyLabel='go'
                 />
               </View>
+              <Text></Text>
               <Button label='Login' onPress={() => true} />
+              <Text></Text>
+
+              <Text style={{color: 'grey'}}>Not a user?</Text>
+              <Text></Text>
+              <Button label='Sign Up' onPress={() => navigate('/signUp')} />
+              <Text></Text>
+              <Text></Text>
+              <Text></Text>
         </View>
     );
+
+
 }

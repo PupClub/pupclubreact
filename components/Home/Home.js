@@ -6,9 +6,6 @@ export default function Home() {
     return (
         <View>
             <Login />
-            <Link to="/signUp">
-                <Text>Sign up</Text>
-            </Link>
         </View>
     );
 }
