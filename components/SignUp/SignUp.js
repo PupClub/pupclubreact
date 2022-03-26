@@ -33,7 +33,7 @@ export default function SignUp() {
                     <TextInput
                         onChangeText={handleChange('password')}
                         onBlur={handleBlur('password')}
-                        value={values.email}
+                        value={values.password}
                         placeholder="Password"
                     />
                     <Button onPress={handleSubmit} title="Sign up" />
