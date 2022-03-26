@@ -4,8 +4,11 @@ import { Formik } from 'formik'
 
 export default function SignUp() {
     const handleSubmit = (values) => {
-        console.log(values);
-    };
+        fetch('https://floating-escarpment-03509.herokuapp.com/', {
+            method: 'GET',
+        }).then(response => response.json())
+            .then(data => console.log(data));
+        };
 
     return (
         <Formik
@@ -39,6 +42,7 @@ export default function SignUp() {
                         onBlur={handleBlur('password')}
                         value={values.password}
                         placeholder="Password"
+                        secureTextEntry={true}
                     />
                     <Button onPress={handleSubmit} title="Sign up" />
                 </View>
