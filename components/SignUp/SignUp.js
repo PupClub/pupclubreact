@@ -24,7 +24,6 @@ export default function SignUp() {
             }}
             onSubmit={handleSubmit}
         >
-
             {({ handleChange, handleBlur, handleSubmit, values }) => (
                 <View>
                     <TextInput
