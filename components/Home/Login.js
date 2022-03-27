@@ -33,6 +33,7 @@ export default function Login() {
                   keyboardAppearance='light'
                   returnKeyType='next'
                   returnKeyLabel='next'
+                  color='white'
                 />
               </View>
               <View style={{ paddingHorizontal: 20, marginBottom: 6, width: '69%' }}>
@@ -42,6 +43,7 @@ export default function Login() {
                   secureTextEntry
                   autoCompleteType='password'
                   autoCapitalize='none'
+                  color='white'
                   keyboardAppearance='dark'
                   returnKeyType='go'
                   returnKeyLabel='go'
