@@ -4,15 +4,26 @@ import { Entypo as Icon } from '@expo/vector-icons';
 
 export default function TextInput({ icon, ...otherProps }) {
   const validationColor = '#223e4b';
+  const styles = StyleSheet.create({
+          container: {
+              flex: 1,
+              //justifyContent: "space-between",
+              borderBottomColor: 'white',
+              borderBottomWidth: 0.4,
+              marginBottom: 0,
+          },
+          bottom: {
+              fontSize: 36,
+              alignSelf: 'auto',
+              color: 'white',
+           },
+      });
   return (
     <View
       style={{
         flexDirection: 'row',
         alignItems: 'center',
         height: 48,
-        borderRadius: 8,
-        borderColor: validationColor,
-        borderWidth: StyleSheet.hairlineWidth,
         padding: 8
       }}
     >

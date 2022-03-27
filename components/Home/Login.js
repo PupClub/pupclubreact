@@ -10,6 +10,52 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 
 export default function Login() {
+    const navigate = useNavigate();
+        <View
+              style={{
+                flex: 1,
+                backgroundColor: "black",
+                alignItems: 'center',
+                justifyContent: 'center',
+                //width: "full",
+                minWidth: 413,
+              }}
+        >
+              <View>
+                <Image source= {dogIcon} style={{width: 200, marginTop: 15, height: 400, margin: -50}}/>
+               </View>
+
+              <View style={{ paddingHorizontal: -10, marginBottom: 6, width: '69%'}}>
+                <TextInput
+                  //icon='mail'
+                  placeholder='Enter your email'
+                  autoCapitalize='none'
+                  autoCompleteType='email'
+                  keyboardType='email-address'
+                  keyboardAppearance='light'
+                  returnKeyType='next'
+                  returnKeyLabel='next'
+                  color='white'
+                />
+              </View>
+
+              <View style={{ paddingHorizontal: -10, marginBottom: 6, width: '69%' }}>
+                <TextInput
+                  //icon='key'
+                  placeholder='Enter your password'
+                  secureTextEntry
+                  autoCompleteType='password'
+                  autoCapitalize='none'
+                  color='white'
+                  keyboardAppearance='dark'
+                  returnKeyType='go'
+                  returnKeyLabel='go'
+                />
+              </View>
+
+              <Text></Text>
+              <Button label='Login' onPress={() => true} />
+              <Text></Text>
   const navigate = useNavigate();
   const handleSubmit = (values) => {
     console.log("Trying to log in", values.email)
